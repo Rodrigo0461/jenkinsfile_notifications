@@ -30,7 +30,7 @@ pipeline {
       post {
             success {
                 slackSend channel: '#slackchannel',
-                color: 'success',
+                color: 'good',
                 message: "*${currentBuild.currentResult}:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n More info at: ${env.BUILD_URL}"
             }
 
